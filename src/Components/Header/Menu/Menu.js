@@ -1,12 +1,7 @@
 import React from "react";
 import MenuPopup from "./MenuPopup";
 import { Link } from 'react-router-dom'
-// import Cart from "./Components/Body/Cart/Cart";
 import NotFound from '../../NotFound';
-
-const Demo=()=>{
-  return<span>wld</span>
-}
 
 
 function Menu() {

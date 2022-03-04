@@ -4,7 +4,7 @@ import Footer from './Components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from "./Components/Body/Home/Home";
 import About from "./Components/Body/About/About";
-import Cart from './Components/Body/Cart/Cart';
+import Cart from  "./Components/Body/Cart/Cart";
 
 function App() {
   return (
