@@ -4,7 +4,7 @@ import Search from "./Search/Search";
 import Account from "./Account/Account";
 import CompanyLogo from "./Logo/CompanyLogo";
 
-function Header() {
+const Header = () => {
     return (
         <div className="header">
             <header className="site-navbar" role="banner">

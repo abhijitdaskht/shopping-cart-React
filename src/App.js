@@ -1,18 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './Components/Header/Header';
-import BodyDetails from "./Components/Body/BodyDetails";
 import Footer from './Components/Footer/Footer';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from "./Components/Body/Home/Home";
+import About from "./Components/Body/About/About";
+import Cart from './Components/Body/Cart/Cart';
 
 function App() {
   return (
-    <div className="App">
-      <div className="site-wrap">
+    <BrowserRouter>
+      <div className="App">
         <Header></Header>
-        <BodyDetails></BodyDetails>
+        <Routes>
+          <Route path="/">
+            <Route path="home" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="cart" element={<Cart />} />
+          </Route>
+        </Routes>
         <Footer></Footer>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

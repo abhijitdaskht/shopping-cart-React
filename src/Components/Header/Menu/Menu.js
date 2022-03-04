@@ -1,42 +1,52 @@
 import React from "react";
+import MenuPopup from "./MenuPopup";
+import { Link } from 'react-router-dom'
+// import Cart from "./Components/Body/Cart/Cart";
+import NotFound from '../../NotFound';
 
-function Menu(){
-    return(
-        <nav className="site-navigation text-right text-md-center" role="navigation">
-          <div className="container">
-            <ul className="site-menu js-clone-nav d-none d-md-block">
-              <li className="has-children active">
-                <a href="">Home</a>
-                <ul className="dropdown">
-                  <li><a href="#">Menu One</a></li>
-                  <li><a href="#">Menu Two</a></li>
-                  <li><a href="#">Menu Three</a></li>
-                  <li className="has-children">
-                    <a href="#">Sub Menu</a>
-                    <ul className="dropdown">
-                      <li><a href="#">Menu One</a></li>
-                      <li><a href="#">Menu Two</a></li>
-                      <li><a href="#">Menu Three</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li className="has-children">
-                <a href="">About</a>
-                <ul className="dropdown">
-                  <li><a href="#">Menu One</a></li>
-                  <li><a href="#">Menu Two</a></li>
-                  <li><a href="#">Menu Three</a></li>
-                </ul>
-              </li>
-              <li><a href="">Shop</a></li>
-              <li><a href="#">Catalogue</a></li>
-              <li><a href="#">New Arrivals</a></li>
-              <li><a href="">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-    );
+const Demo=()=>{
+  return<span>wld</span>
+}
+
+
+function Menu() {
+  return (
+    <>
+      <nav className="site-navigation text-right text-md-center" role="navigation">
+        <div className="container">
+          <ul className="site-menu js-clone-nav d-none d-md-block">
+            <li className="has-children active">
+              <Link exact="true" to={'/home'} className="nav-link">Home</Link>
+            </li>
+            <li className="has-children">
+              <Link exact="true" to={'/about'} className="nav-link">About</Link>
+              <MenuPopup></MenuPopup>
+            </li>
+            <li className="has-children">
+              <a href="">Shop</a>
+              <MenuPopup></MenuPopup>
+            </li>
+            <li className="has-children">
+              <a href="#">Catalogue</a>
+              <MenuPopup></MenuPopup>
+            </li>
+            <li className="has-children">
+              <a href="#">New Arrivals</a>
+              <MenuPopup></MenuPopup>
+            </li>
+            <li>
+              {/* <a href="">Contact</a> */}
+              <Link exact="true" to={'/cart'} className="nav-link">cart</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </>
+  );
 }
 
 export default Menu;
+
+
+
+
