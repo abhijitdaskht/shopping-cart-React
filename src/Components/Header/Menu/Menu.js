@@ -1,38 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import MenuPopup from "./MenuPopup";
 import { Link } from 'react-router-dom'
 import NotFound from '../../NotFound';
 
 
-function Menu() {
+const Menu = () => {
+  const [menus, setmenu] = useState([]);
+
+  useEffect(() => {
+    loadMenu();
+  }, []);
+
+  const loadMenu = async () => {
+    const result = await axios.get("http://localhost:3004/menus");
+    setmenu(result.data);
+  }
   return (
     <>
       <nav className="site-navigation text-right text-md-center" role="navigation">
         <div className="container">
           <ul className="site-menu js-clone-nav d-none d-md-block">
-            <li>
-              <Link exact="true" to={'/home'} className="nav-link">Home</Link>
-            </li>
-            <li className="has-children">
-              <Link exact="true" to={'/about'} className="nav-link">About</Link>
-              <MenuPopup></MenuPopup>
-            </li>
-            <li className="has-children">
-            <Link exact="true" to={'/shop'} className="nav-link">Shop</Link>
-              <MenuPopup></MenuPopup>
-            </li>
-            <li className="has-children">
-              <a href="#">Catalogue</a>
-              <MenuPopup></MenuPopup>
-            </li>
-            <li className="has-children">
-              <a href="#">New Arrivals</a>
-              <MenuPopup></MenuPopup>
-            </li>
-            <li>
-              {/* <a href="">Contact</a> */}
-              <Link exact="true" to={'/contact'} className="nav-link">Contact</Link>
-            </li>
+            {
+              menus.map((menu, index) => (
+                <li className={menu.isSubmenu ? ("has-children") : ('')}>
+                  <Link exact="true" to={menu.path} className="nav-link">{menu.name}</Link>
+                  {menu.isSubmenu ? (
+                    <MenuPopup></MenuPopup>
+                  ) : ('')}
+                </li>
+              ))
+            }
           </ul>
         </div>
       </nav>

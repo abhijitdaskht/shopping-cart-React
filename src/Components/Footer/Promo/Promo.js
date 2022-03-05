@@ -1,6 +1,6 @@
 import React from "react";
 
-function Promo() {
+const Promo = () => {
     return (
         <div className="col-md-6 col-lg-3 mb-4 mb-lg-0">
             <h3 className="footer-heading mb-4">Promo</h3>

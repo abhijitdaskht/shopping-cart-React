@@ -1,6 +1,6 @@
 import React from "react";
 
-function search() {
+const search = () => {
   return (
     <div className="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
       <form action="" className="site-block-top-search">

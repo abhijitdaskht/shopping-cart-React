@@ -3,7 +3,7 @@ import ContactInfo from "./ContactInfo/ContactInfo";
 import Promo from "./Promo/Promo";
 import FooterNavigation from "./Navigation/FooterNavigation";
 
-function Footer() {
+const Footer = () => {
     return (
         <footer className="site-footer border-top">
             <div className="container">

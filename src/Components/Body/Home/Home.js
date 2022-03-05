@@ -3,7 +3,7 @@ import Banner from "./Banner";
 import FeturedProduct from "./FeaturedProducts";
 import ProductCategory from "./ProductCategory";
 
-function Home () {
+const Home = () => {
     return (
         <div>
             <Banner></Banner>

@@ -5,6 +5,8 @@ import Breadcrumbs from "./Breadcrumbs"
 
 const Shop = () => {
     const [products,setproduct] = useState([]);
+    const currentPathName = window.location.pathname;
+    const path = currentPathName.split("/").pop();
 
     useEffect(() => {
         loadProduct();
@@ -17,14 +19,11 @@ const Shop = () => {
 
     return (
         <>
-            <Breadcrumbs></Breadcrumbs>
-
+            <Breadcrumbs pathname={path}></Breadcrumbs>
             <div className="site-section">
                 <div className="container">
-
                     <div className="row mb-5">
                         <div className="col-md-12 order-2">
-
                             <div className="row">
                                 <div className="col-md-12 mb-5">
                                     <div className="float-md-left mb-4"><h2 className="text-black h5">Shop All</h2></div>

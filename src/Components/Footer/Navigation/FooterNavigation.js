@@ -1,6 +1,6 @@
 import React from "react";
 
-function FooterNavigation() {
+const FooterNavigation = () => {
     return (
         <div className="col-lg-6 mb-5 mb-lg-0">
             <div className="row">

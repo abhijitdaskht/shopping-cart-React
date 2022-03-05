@@ -1,6 +1,6 @@
 import React from "react";
 
-function Banner() {
+const Banner = () => {
     return (
         <div>
             <div className="site-blocks-cover" data-aos="fade"

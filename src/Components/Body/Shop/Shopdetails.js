@@ -2,9 +2,11 @@ import React from "react";
 import Breadcrumbs from "./Breadcrumbs";
 
 const shopdetails = () => {
+    const currentPathName = window.location.pathname;
+    const path = currentPathName.split("/").pop();
     return (
         <>
-            <Breadcrumbs></Breadcrumbs>
+            <Breadcrumbs pathname={path}></Breadcrumbs>
             <div className="site-section">
                 <div className="container">
                     <div className="row">

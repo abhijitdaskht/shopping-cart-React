@@ -1,10 +1,13 @@
 import React from "react";
 import Breadcrumbs from "../Shop/Breadcrumbs";
 
-function About() {
+
+const About = () => {
+    const currentPathName = window.location.pathname;
+    const path = currentPathName.split("/").pop();
     return (
         <>
-            <Breadcrumbs></Breadcrumbs>
+            <Breadcrumbs pathname={path}></Breadcrumbs>
             <div class="site-section border-bottom" data-aos="fade">
                 <div class="container">
                     <div class="row mb-5">

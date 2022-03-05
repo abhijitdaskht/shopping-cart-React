@@ -47,19 +47,97 @@
         {
             "id": 1,
             "name": "Men",
-            "Image":"images/men.jpg"
-
-        },{
+            "Image": "images/men.jpg"
+        },
+        {
             "id": 2,
             "name": "Women",
-            "Image":"images/women.jpg"
-
+            "Image": "images/women.jpg"
         },
         {
             "id": 3,
             "name": "Child",
-            "Image":"images/children.jpg"
-
+            "Image": "images/children.jpg"
+        }
+    ],
+    "menus": [
+        {
+            "id": 1,
+            "name": "Home",
+            "path":"/home",
+            "isSubmenu": 0,
+            "submenu":[]
+        },
+        {
+            "id": 2,
+            "name": "About",
+            "path":"/about",
+            "isSubmenu": 1,
+            "submenu": [
+                {
+                    "id": 1,
+                    "name": "menu1"
+                },
+                {
+                    "id": 2,
+                    "name": "mwnu2"
+                },
+                {
+                    "id": 3,
+                    "name": "menu3"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Shop",
+            "path":"/shop",
+            "isSubmenu": 1,
+            "submenu": [
+                {
+                    "id": 1,
+                    "name": "menu11"
+                },
+                {
+                    "id": 2,
+                    "name": "mwnu22"
+                },
+                {
+                    "id": 3,
+                    "name": "menu33"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Catalogue",
+            "path":"/Catalogue",
+            "isSubmenu": 0,
+            "submenu":[]
+        },
+        {
+            "id": 5,
+            "name": "New Arrivals",
+            "path":"/NewArrivals",
+            "isSubmenu": 0,
+            "submenu":[]
+        },
+        {
+            "id": 6,
+            "name": "Contact",
+            "path":"/Contact",
+            "isSubmenu": 0,
+            "submenu":[]
+        }
+    ],
+    "cartDetails":[
+        {
+            "id": 1,
+            "name": "Product 1",
+            "price": "$50",
+            "imageurl": "images/cloth_1.jpg",
+            "quantity":1
         }
     ]
+    
 }

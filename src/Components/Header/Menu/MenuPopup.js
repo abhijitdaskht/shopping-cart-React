@@ -1,6 +1,6 @@
 import React from "react";
 
-function MenuPopup() {
+const MenuPopup = () => {
     return (
         <ul className="dropdown">
             <li><a href="#">Menu One</a></li>

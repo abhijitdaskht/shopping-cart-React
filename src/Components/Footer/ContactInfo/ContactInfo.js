@@ -1,6 +1,6 @@
 import React from "react";
 
-function ContactInfo() {
+const ContactInfo = () => {
     return (
         <div className="col-md-6 col-lg-3">
             <div className="block-5 mb-5">
