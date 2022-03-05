@@ -10,7 +10,7 @@ function Menu() {
       <nav className="site-navigation text-right text-md-center" role="navigation">
         <div className="container">
           <ul className="site-menu js-clone-nav d-none d-md-block">
-            <li className="has-children active">
+            <li>
               <Link exact="true" to={'/home'} className="nav-link">Home</Link>
             </li>
             <li className="has-children">
@@ -18,7 +18,7 @@ function Menu() {
               <MenuPopup></MenuPopup>
             </li>
             <li className="has-children">
-              <a href="">Shop</a>
+            <Link exact="true" to={'/shop'} className="nav-link">Shop</Link>
               <MenuPopup></MenuPopup>
             </li>
             <li className="has-children">
@@ -31,7 +31,7 @@ function Menu() {
             </li>
             <li>
               {/* <a href="">Contact</a> */}
-              <Link exact="true" to={'/cart'} className="nav-link">cart</Link>
+              <Link exact="true" to={'/contact'} className="nav-link">Contact</Link>
             </li>
           </ul>
         </div>

@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-function FeturedProduct() {
+const FeturedProduct = () => {
+    const [products, setproduct] = useState([]);
+
+    useEffect(() => {
+        loadProduct();
+    }, []);
+
+    const loadProduct = async () => {
+        const result = await axios.get("http://localhost:3004/products");
+        setproduct(result.data);
+    }
+
     return (
         <div className="site-section block-3 site-blocks-2 bg-light">
             <div className="container">
